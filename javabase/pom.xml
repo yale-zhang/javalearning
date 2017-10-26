@@ -11,5 +11,12 @@
 
     <artifactId>java-base</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
 </project>
