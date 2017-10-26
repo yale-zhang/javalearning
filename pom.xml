@@ -8,15 +8,40 @@
     <artifactId>javalearning</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <junit.version>4.11</junit.version>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>yale</id>
+            <email>zys6024@163.com</email>
+        </developer>
+    </developers>
     <modules>
-        <module>blogs</module>
         <module>javabase</module>
         <module>javacontainer</module>
         <module>javaio</module>
         <module>javajvm</module>
         <module>javamultithread</module>
-        <module>java8</module>
+        <module>javacorelibrary</module>
+        <module>javaweb</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
