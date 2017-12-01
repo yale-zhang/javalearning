@@ -24,6 +24,7 @@
         </developer>
     </developers>
     <modules>
+        <module>java8</module>
         <module>javabase</module>
         <module>javacontainer</module>
         <module>javaio</module>
