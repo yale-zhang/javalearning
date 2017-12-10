@@ -4,3 +4,4 @@
 - [datatype](src/main/java/datatype)数据类型转换以及自动装箱拆箱
 
 - [regex](src/main/java/regex) java.utill.regex 正则表达式
+- [Exception](src/main/java/Exception) 异常
