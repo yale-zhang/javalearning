@@ -1,4 +1,4 @@
-package com.aisino.qysds.common.dto;/*
+package Json.fastjson;/*
  * @Author: Dkerlo
  * @Description :
  * @Date: 创建于 2018/1/26
