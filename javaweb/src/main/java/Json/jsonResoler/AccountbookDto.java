@@ -2,7 +2,7 @@ package Json.jsonResoler;
 
 import java.io.Serializable;
 
-public class Accountbook implements Serializable {
+public class AccountbookDto implements Serializable {
 
     private String cAcctGUID;
     private String cGUID;
