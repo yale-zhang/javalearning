@@ -1,14 +1,10 @@
 package Json.fastjson;
 
-import Json.jsonResoler.Accountbook;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-
 import java.util.List;
 
 public class FastJsonResolver {
 
-    private static final String  COMPLEX_JSON_STR1 = "{\"account\": [" +
+  /*  private static final String  COMPLEX_JSON_STR1 = "{\"account\": [" +
             "{" +
             "\"cCode\": \"1001\"," +
             "\"cFullName\": \"\\u5e93\\u5b58\\u73b0\\u91d1\"," +
@@ -87,5 +83,5 @@ public class FastJsonResolver {
         for (Accountbook account:accountbookDtos){
             String cAcctGUID = account.getCAcctGUID();
         }
-    }
+    }*/
 }
