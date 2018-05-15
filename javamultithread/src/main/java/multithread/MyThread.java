@@ -5,9 +5,9 @@ import java.util.concurrent.SynchronousQueue;
 public class MyThread extends Thread {
     private Object lock;
 
-    public MyThread(Object lock) {
+    /*public MyThread(Object lock) {
         this.lock = lock;
-    }
+    }*/
 
     public void run()
     {

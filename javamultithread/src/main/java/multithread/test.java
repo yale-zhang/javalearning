@@ -3,6 +3,19 @@ package multithread;
 import java.util.concurrent.*;
 
 public class test {
+    public static void main(String[] args)
+    {
+        staticthreads();
+        //MyThreadTest();
+        //CyclicBarrierThreads();
+        //callableFuture();
+        //callableFutureTask();
+    }
+
+    public static void staticthreads(){
+        staticthread staticthread = new staticthread();
+        staticthread.start();
+    }
 
     public static void MyThreadTest(){
         MyThread myThread = new MyThread();
@@ -78,11 +91,5 @@ public class test {
         }
     }
 
-    public static void main(String[] args)
-    {
-        MyThreadTest();
-        //CyclicBarrierThreads();
-        //callableFuture();
-        //callableFutureTask();
-    }
+
 }
