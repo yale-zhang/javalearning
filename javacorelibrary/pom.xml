@@ -11,12 +11,20 @@
 
     <artifactId>javacorelibrary</artifactId>
 
-    <!--Aviator是google一个轻量级、高性能的Java表达式执行引擎-->
+
     <dependencies>
+        <!--Aviator是google一个轻量级、高性能的Java表达式执行引擎-->
         <dependency>
             <groupId>com.googlecode.aviator</groupId>
             <artifactId>aviator</artifactId>
             <version>3.1.0</version>
+        </dependency>
+
+        <!--Apache HttpComponents-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.5</version>
         </dependency>
     </dependencies>
 
