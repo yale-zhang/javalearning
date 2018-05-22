@@ -39,16 +39,22 @@ public class aviatorExample {
         /**
          *  调用函数
          */
-        Long result3 = (Long) AviatorEvaluator.execute("string.length('hello')");
+        Long result3 = (Long) AviatorEvaluator.exec("string.length('hello')");
+        Boolean result4 = (Boolean) AviatorEvaluator.exec("string.contains(\"test\",string.substring('hello',1,2))");
 
         System.out.println(result);
         System.out.println(result1);
         System.out.println(result2);
         System.out.println(result3);
+        System.out.println(result4);
+    }
+    public static void aviatorFunction(){
+
     }
 
 
     public static void main(String[] args) {
         TestAviator();
+        aviatorFunction();
     }
 }
