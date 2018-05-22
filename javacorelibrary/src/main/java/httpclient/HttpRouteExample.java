@@ -1,6 +1,6 @@
 package httpclient;
 
-public class HttpRoute  {
+public class HttpRouteExample {
 
     /**
      * http 连接路由
@@ -24,7 +24,7 @@ public class HttpRoute  {
      *  路由计算
      *  RouteInfo接口表示通过一个或多个中间步骤或跳转最终到达目标主机的的路由信息。
      *  Interface RouteInfo
-     *       All Known Implementing Classes:HttpRoute, RouteTracker
+     *       All Known Implementing Classes:HttpRouteExample, RouteTracker
      *       HttpTracker是RouteInfo接口的可变实现类，由HttpClient在内部使用于追踪到最终路由目标主机的剩余跳转数。
      *       HttpTracker类可以在成功执行跳转到下一个路由目标之后被更新。
      *

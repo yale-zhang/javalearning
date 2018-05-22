@@ -89,5 +89,13 @@ public class httpClientException {
 
         //为了处理安全自动的重试RFC-2616协议中定义的请求方法GET，HEAD，PUT，DELETE，OPTIONS和TRACE，
         // 可以用StandardHttpRequestRetryHandler代替使用默认的。
+
+        //中止请求
+        /**
+         * 在某些情况下，由于服务器端的高负载或者客户端存在过多的并发请求问题，HTTP请求不能在预期时间内执行完毕。
+         * 需要提前中止请求并开启阻塞在I/O操作的线程。
+         *
+         * 通过HttpUriRequest#abort()方法，可以在任何阶段中止由HttpClient执行的HTTP请求。
+         */
     }
 }

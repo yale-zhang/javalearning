@@ -60,7 +60,7 @@ public class httpClient_1_2 {
      *  在http请求执行的过程中，httpClient向context添加了一下属性：
      *  HttpConnection 表示与目标服务器的实际连接
      *  HttpHost  表示连接的目标
-     *  HttpRoute 表示连接的路由
+     *  HttpRouteExample 表示连接的路由
      *  HttpRequest 表示Http请求
      *  HttpResponse 表示Http响应
      *  lang.Boolean 表示请求是否被完整的发送到目标
