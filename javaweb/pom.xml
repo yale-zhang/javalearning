@@ -12,6 +12,14 @@
     <artifactId>javaweb</artifactId>
 
     <dependencies>
+
+        <!--Aviator是google一个轻量级、高性能的Java表达式执行引擎-->
+        <!-- https://mvnrepository.com/artifact/com.googlecode.aviator/aviator -->
+        <dependency>
+            <groupId>com.googlecode.aviator</groupId>
+            <artifactId>aviator</artifactId>
+            <version>3.3.0</version>
+        </dependency>
         <!-- commons -->
         <dependency>
             <groupId>org.apache.commons</groupId>
