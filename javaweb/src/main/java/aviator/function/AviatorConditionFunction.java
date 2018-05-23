@@ -12,18 +12,6 @@ import org.apache.commons.lang3.StringUtils;
 import java.math.BigDecimal;
 import java.util.Map;
 
-/**
-* <p>企业所得税软件: </p>
-* <p style='font-size:16px;color:red'><b>
-作用: 解决原有的三元运算符的bug
-</b></p>
-* <p>浙江爱信诺航天信息 </p>
-*
-*
-* @author Dkerlo
-* @date 2017年10月18日
-*
-*/
 public class AviatorConditionFunction extends AbstractFunction {
 
 	@Override

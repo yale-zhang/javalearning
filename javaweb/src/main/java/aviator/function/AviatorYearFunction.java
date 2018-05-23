@@ -1,10 +1,10 @@
 package aviator.function;
 
-import com.aisino.qysds.common.util.StringUtil;
 import com.googlecode.aviator.runtime.function.AbstractFunction;
 import com.googlecode.aviator.runtime.function.FunctionUtils;
 import com.googlecode.aviator.runtime.type.AviatorLong;
 import com.googlecode.aviator.runtime.type.AviatorObject;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;
 
@@ -14,7 +14,7 @@ public class AviatorYearFunction extends AbstractFunction {
 		try {				
 			String str = FunctionUtils.getStringValue(arg1, env);
 			String _year="1900";//默认年份
-			if(StringUtil.isNotEmpty(str) && str.length()>=4)
+			if(StringUtils.isNotEmpty(str) && str.length()>=4)
 			{
 				_year = str.substring(0, 4);
 			}
