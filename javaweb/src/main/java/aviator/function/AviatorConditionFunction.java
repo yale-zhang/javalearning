@@ -12,6 +12,10 @@ import org.apache.commons.lang3.StringUtils;
 import java.math.BigDecimal;
 import java.util.Map;
 
+/**
+作用: 解决原有的三元运算符的bug
+*
+*/
 public class AviatorConditionFunction extends AbstractFunction {
 
 	@Override
