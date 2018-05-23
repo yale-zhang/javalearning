@@ -15,7 +15,7 @@ public class AviatorRegisterConfigue implements ApplicationListener<ContextRefre
 
     /**
      * Triggered when a applicationcontext been initialized or refresh
-     * @param contextRefreshedEvent
+     * @param event
      */
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
@@ -24,6 +24,5 @@ public class AviatorRegisterConfigue implements ApplicationListener<ContextRefre
             AviatorEvaluator.addFunction(new AviatorAbsoluteFunction());
             //LOG.info("Aviator自定义函数 注册成功");
         }
-
     }
 }
