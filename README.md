@@ -1,5 +1,5 @@
 #### java学习札记
-    笔记内容主要是对java的一些基础特性和编程细节进行总结和归纳。
+笔记内容主要是对java的一些基础特性和编程细节进行总结和归纳,。
   
 #### 仓库目录   
 
@@ -11,5 +11,9 @@
 - [javamultithread](/javamultithread/README.md):多线程模块   
 - [javaweb](/javaweb/README.md):javaWeb模块   
 
+
 > branch:ex-dev  提交临时代码
 > branch:master 主干代码
+
+> branch:master 每月整理合并分支branch:ex-dev 上的代码
+
