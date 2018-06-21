@@ -1,8 +1,7 @@
 package java8.base;
-import java8.VO.User;
-import org.junit.Test;
 
-import java.util.NoSuchElementException;
+import java8.VO.User;
+
 import java.util.Optional;
 public class OptionalTest {
 
@@ -12,7 +11,6 @@ public class OptionalTest {
         empty.get();
     }*/
 
-    @Test
     public void whenCreateOfEmptyOptional_thenNullPointerException() {
         User user = new User();
         Optional<User> empty = Optional.of(user);
