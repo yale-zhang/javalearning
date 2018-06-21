@@ -47,6 +47,7 @@ public class MapTest extends TestCase {
             map.putIfAbsent(i,"val_"+i);
         }
     }
+
     public void testGetordefault(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
