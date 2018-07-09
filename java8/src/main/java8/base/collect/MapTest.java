@@ -2,9 +2,7 @@ package java8.base.collect;
 
 import junit.framework.TestCase;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MapTest extends TestCase {
     public void testMapCompute(){
@@ -48,7 +46,6 @@ public class MapTest extends TestCase {
         }
     }
 
-
     public void testGetordefault(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
@@ -57,8 +54,23 @@ public class MapTest extends TestCase {
         //returns the value to which the specified key is mappded, or defaultValue if the map contains no mapping for
         //the key
         String c = map.getOrDefault(5, "c");
-        int code = map.hashCode();
-        System.out.println(c+"  "+code);
+        System.out.println(c);
+
+            Iterator<Map.Entry<Integer, String>> iterator = map.entrySet().iterator();
+            if(iterator.hasNext()){
+                Map.Entry<Integer, String> entry = iterator.next();
+            }
     }
 
+    public void testMaps(){
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1,"a");
+        map.put(2,"b");
+        map.put(3,"");
+        map.put(1,"c");
+        for (Map.Entry<Integer, String> entries:map.entrySet()){
+            entries.setValue("d");
+        }
+        map.forEach((k,v) -> System.out.println("key :"+k+"; value:"+v));
+    }
 }
