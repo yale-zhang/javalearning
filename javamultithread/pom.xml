@@ -10,12 +10,39 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>javamultithread</artifactId>
     <dependencies>
+        <!--logging 日志记录-->
+        <!-- Logback - http://logback.qos.ch/ -->
+        <!-- Documentation - http://logback.qos.ch/documentation.html -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.5</version>
+        </dependency>
+        <!--Test 测试-->
+        <!-- TestNG - http://testng.org/doc/index.html -->
+        <!-- Documentation - http://testng.org/doc/documentation-main.html -->
+        <dependency>
+           <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- AssertJ - http://joel-costigliola.github.io/assertj/ -->
+        <!-- Quick start - http://joel-costigliola.github.io/assertj/assertj-core-quick-start.html -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <!-- use 3.3.0 for Java 8 projects -->
+            <version>2.4.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Mockito - http://site.mockito.org/ -->
+        <!-- Mockito API - http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>1.10.19</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-
 </project>

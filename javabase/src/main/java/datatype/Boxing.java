@@ -1,10 +1,7 @@
 package datatype;
 
 /**
- * Created by Brian on 2016/4/14.
- *
  * TODO 有些细节待理解
- *
  * 主要是考装箱和拆箱
  */
 public class Boxing {
