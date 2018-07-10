@@ -1,5 +1,6 @@
 #### Java 多线程模块
-
+   - [Java 8并发工具包](src/main/java/concurrency/jdk/concurrent.MD)
+    
    - [自定义的线程工厂，定制的Thread基类](src/main/java/concurrency/thread)
     
     
