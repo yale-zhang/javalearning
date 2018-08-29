@@ -3,12 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.yale.learning.java</groupId>
-    <artifactId>javalearning</artifactId>
-    <packaging>pom</packaging>
-    <name>javalearning</name>
+    <artifactId>java-learning</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>java-learning</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,8 +17,16 @@
         <junit.version>4.11</junit.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <slf4j.version>1.7.12</slf4j.version>
-    </properties>
 
+        <version.java8>1.0.0-SNAPSHOT</version.java8>
+        <version.java-base>1.0.0-SNAPSHOT</version.java-base>
+        <version.java-container>1.0.0-SNAPSHOT</version.java-container>
+        <version.java-corelibrary>1.0.0-SNAPSHOT</version.java-corelibrary>
+        <version.java-io>1.0.0-SNAPSHOT</version.java-io>
+        <version.java-jvm>1.0.0-SNAPSHOT</version.java-jvm>
+        <version.java-multithread>1.0.0-SNAPSHOT</version.java-multithread>
+        <version.java-web>1.0.0-SNAPSHOT</version.java-web>
+    </properties>
     <developers>
         <developer>
             <id>yale</id>
@@ -36,20 +43,50 @@
         <module>javacorelibrary</module>
         <module>javaweb</module>
     </modules>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <!--tools-->
-        </dependencies>
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <!--tools-->
+        <!-- test bengin-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>3.2.3.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.kubek2k</groupId>
+            <artifactId>springockito</artifactId>
+            <version>1.0.9</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.kubek2k</groupId>
+            <artifactId>springockito-annotations</artifactId>
+            <version>1.0.9</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path-assert</artifactId>
+            <version>0.9.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!--end -->
+    </dependencies>
 </project>
