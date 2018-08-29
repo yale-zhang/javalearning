@@ -20,7 +20,7 @@
 
         <version.java8>1.0.0-SNAPSHOT</version.java8>
         <version.java-base>1.0.0-SNAPSHOT</version.java-base>
-        <version.java-container>1.0.0-SNAPSHOT</version.java-container>
+        <version.java-component>1.0.0-SNAPSHOT</version.java-component>
         <version.java-corelibrary>1.0.0-SNAPSHOT</version.java-corelibrary>
         <version.java-io>1.0.0-SNAPSHOT</version.java-io>
         <version.java-jvm>1.0.0-SNAPSHOT</version.java-jvm>
@@ -35,13 +35,13 @@
     </developers>
     <modules>
         <module>java8</module>
-        <module>javabase</module>
-        <module>javacontainer</module>
-        <module>javaio</module>
-        <module>javajvm</module>
-        <module>javamultithread</module>
-        <module>javacorelibrary</module>
-        <module>javaweb</module>
+        <module>java-base</module>
+        <module>java-component</module>
+        <module>java-io</module>
+        <module>java-jvm</module>
+        <module>java-multithread</module>
+        <module>java-corelibrary</module>
+        <module>java-web</module>
     </modules>
     <dependencies>
         <dependency>

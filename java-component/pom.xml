@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java-container</artifactId>
-    <version>${version.java-container}</version>
+    <artifactId>java-component</artifactId>
+    <version>${version.java-component}</version>
     <packaging>jar</packaging>
 </project>

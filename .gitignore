@@ -7,9 +7,10 @@
 *.iml
 out
 gen
-javabase/target/
-javacorelibrary/target/
-javamultithread/target/
+java-base/target/
+java-corelibrary/target/
+java-multithread/target/
+java-component/target/
 javaweb/src/main/webapp/
 javaweb/target/
 javaweb/bin/
