@@ -2,7 +2,11 @@ package java8.base.collect;
 
 import junit.framework.TestCase;
 
-import java.util.*;
+import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class MapTest extends TestCase {
     public void testMapCompute(){
@@ -72,5 +76,10 @@ public class MapTest extends TestCase {
             entries.setValue("d");
         }
         map.forEach((k,v) -> System.out.println("key :"+k+"; value:"+v));
+    }
+
+    public void test(){
+        BigDecimal scale = BigDecimal.ZERO.setScale(2);
+        System.out.print(scale);
     }
 }

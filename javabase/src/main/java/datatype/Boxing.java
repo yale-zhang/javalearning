@@ -1,15 +1,14 @@
 package datatype;
 
+import java.math.BigDecimal;
+
 /**
- * Created by Brian on 2016/4/14.
- *
  * TODO 有些细节待理解
- *
  * 主要是考装箱和拆箱
  */
 public class Boxing {
     public static void main(String[] args) {
-        Integer a = 1;
+       /* Integer a = 1;
         Integer b = 2;
         Integer c = 3;
         Integer d = 3;
@@ -22,7 +21,9 @@ public class Boxing {
         System.out.println(c.equals(a + b));//true
         System.out.println(g == (a + b));//true
         System.out.println(g.equals(a + b));//false
-        System.out.println(new Integer(2) == new Integer(2));//false
+        System.out.println(new Integer(2) == new Integer(2));//false*/
+            BigDecimal scale = BigDecimal.ZERO.setScale(2);
+            System.out.print(scale);
 
     }
 }

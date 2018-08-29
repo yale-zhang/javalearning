@@ -1,10 +1,10 @@
 package multithread;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.CyclicBarrier;
 
-public class CyclicBarrierThreadTest {
+public class CyclicBarrierThreadTest{
     @Test
     public void CyclicBarrierTest(){
         Runnable runnable = new Runnable(){

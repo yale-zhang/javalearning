@@ -1,4 +1,4 @@
-package java8.base;
+package java8.base.collect;
 
 import java8.VO.User;
 
