@@ -13,4 +13,8 @@
     <artifactId>java-component</artifactId>
     <version>${version.java-component}</version>
     <packaging>jar</packaging>
+
+    <dependencies>
+
+    </dependencies>
 </project>
