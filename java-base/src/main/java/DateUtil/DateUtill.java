@@ -26,7 +26,8 @@ public class DateUtill {
         System.out.println(format1);
         DateTime dateTime1 = DateUtil.beginOfMonth(dateTime);
         System.out.println(dateTime1);
-
+       String str=  "2017-03-01";
+        System.out.println(str.contains("2017-03"));
 
     }
 
