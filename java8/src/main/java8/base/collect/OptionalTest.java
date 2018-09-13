@@ -1,6 +1,7 @@
 package java8.base.collect;
 
-import java8.VO.User;
+
+import vo.User;
 
 import java.util.Optional;
 public class OptionalTest {

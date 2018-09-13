@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class MapTest extends TestCase {
+
     public void testMapCompute(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
