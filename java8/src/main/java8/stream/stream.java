@@ -3,7 +3,7 @@ package stream;
 import java.util.Arrays;
 import java.util.List;
 
-public class Stream {
+public class stream {
 
     public static void main(String[] args) {
         //迭代 numbers 集合中的元素，但仅迭代至找到满足它的两个要求（大于 10 且是偶数）的元素。
