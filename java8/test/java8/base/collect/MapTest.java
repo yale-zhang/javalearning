@@ -18,6 +18,14 @@ public class MapTest extends TestCase {
         map.compute(1,(k,v) ->(v == null)? "msg":v.concat("msg"));
         assertEquals("amsg",map.get(1));
     }
+    public void testss(){
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1,"a");
+        map.put(2,"b");
+        map.put(3,"");
+        map.compute(1,(k,v) ->(v == null)? "msg":v.concat("msg"));
+        assertEquals("amsg",map.get(1));
+    }
     public void testMapForEach(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");

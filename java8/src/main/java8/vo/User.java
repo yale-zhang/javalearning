@@ -33,6 +33,11 @@ public class User implements Serializable{
         this.age = age;
     }
 
+    public User(String id, String name, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 
     @Override
     public String toString() {

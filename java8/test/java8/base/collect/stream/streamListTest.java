@@ -3,7 +3,6 @@ package java8.base.collect.stream;
 import org.junit.Test;
 import vo.User;
 
-import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -12,16 +11,14 @@ public class streamListTest {
 
     public List<User> getDate(){
         List<User> list =new ArrayList<>();
-        User user = new User();
-        user.setId("001");
-        user.setName("yale");
-        user.setAge(12);
-        User user1 = new User();
-        user1.setId("001");
-        user1.setName("tom");
-        user1.setAge(18);
-        list.add(user);
+        User user11 = new User("001","yale",12);
+        User user22 = new User("002","yale",10);
+        User user1 = new User("001","tom",18);
+        User user2 = new User("002","tom",16);
+        list.add(user11);
+        list.add(user22);
         list.add(user1);
+        list.add(user2);
         return list;
     }
     // 过滤操作（fileter,distinct,limt,skip）
