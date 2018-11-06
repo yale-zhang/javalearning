@@ -18,6 +18,8 @@ public class streamTest {
         User user33 =new User("3","tom",20);
         User user3 =new User("2","tom",14);
         List<User> userList = Lists.newArrayList(user, user1, user2, user3,user11,user33);
+        Map<String, User> maps = userList.stream().collect(Collectors.toMap(User::getId,users -> users,(v1,v2)->v2));
+        maps.forEach((k,v)->System.out.println("map去重->key:"+k+"    "+"value:"+v));
         //根据名称分组
         Map<String, List<User>> collect = userList.stream().sorted(Comparator.comparing(User::getAge)).collect(Collectors.groupingBy(User::getName));
         collect.forEach((k,v)->System.out.println("根据名称分组->key:"+k+"    "+"value:"+v));
