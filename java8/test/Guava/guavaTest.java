@@ -1,10 +1,7 @@
 package Guava;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.MapDifference;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
-import junit.framework.TestCase;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.*;
 import org.junit.Test;
 
 import java.util.HashSet;
@@ -52,4 +49,22 @@ public class guavaTest {
         onlyOnLeftmap.forEach((k,v)->System.out.println("k:"+k+"  "+"v:"+v));  // k:b  v:2
         difference.entriesOnlyOnRight();
     }
+
+    @Test
+    public void preconditionstest(){
+        //验调用我们的方法的方法传参是否正确
+        int count = 0;
+        String count1 =null;
+        //Preconditions.checkArgument(count > 0, "must be positive: %s", count);
+        String integer = Preconditions.checkNotNull(count1);
+        System.out.println(integer);
+    }
+    //Multimap -> Map<K, List<V>>
+    @Test
+    public void multimapTest(){
+        ArrayListMultimap<Object, Object> multimap = ArrayListMultimap.create();
+        System.out.println("");
+
+    }
+
 }
