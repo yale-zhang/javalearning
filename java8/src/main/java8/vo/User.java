@@ -1,6 +1,4 @@
-package vo;
-
-import com.google.common.base.Objects;
+package java8.vo;
 
 import java.io.Serializable;
 

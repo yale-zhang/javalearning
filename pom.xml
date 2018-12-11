@@ -42,6 +42,7 @@
         <commons-lang3.version>3.5</commons-lang3.version>
         <commons-collections4.version>4.1</commons-collections4.version>
         <slf4j.version>1.7.12</slf4j.version>
+        <guava.verion>23.0</guava.verion>
 
         <maven.jar.plugin.version>2.6</maven.jar.plugin.version>
         <maven.failsafe.plugin.version>2.19</maven.failsafe.plugin.version>
@@ -75,6 +76,12 @@
                 <version>${testng.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <!--tools-->
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
@@ -85,15 +92,14 @@
                 <version>${commons-collections4.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <!--tools-->
-            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>23.0</version>
+                <version>${guava.verion}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>4.1.5</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -2,6 +2,8 @@ package com.google.common.base;
 
 import junit.framework.TestCase;
 
+import java.util.Optional;
+
 public class OptionalTest extends TestCase {
 
     public void testToJavaUtil_static() {

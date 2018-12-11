@@ -1,16 +1,10 @@
 package java8.base.collect;
 
-import com.google.common.base.Strings;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
-import stream.IStudent;
 
 public class staticTest {
     //java8 允许使用static来修饰方法。静态方法只能通过接口名来调用
-    @Test
-    public void test1(){
-        IStudent.sayHello();
-    }
 
     @Test
     public void test(){
