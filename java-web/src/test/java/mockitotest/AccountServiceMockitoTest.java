@@ -10,7 +10,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.inject.Inject;
 
 import static junit.framework.TestCase.assertEquals;
 import static org.mockito.Mockito.verify;

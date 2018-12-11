@@ -1,38 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.yale.learning.java</groupId>
     <artifactId>java-learning</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <name>java-learning</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <junit.version>4.11</junit.version>
-        <spring.version>4.2.6.RELEASE</spring.version>
-        <slf4j.version>1.7.12</slf4j.version>
-
-        <version.java8>1.0.0-SNAPSHOT</version.java8>
-        <version.java-base>1.0.0-SNAPSHOT</version.java-base>
-        <version.java-component>1.0.0-SNAPSHOT</version.java-component>
-        <version.java-corelibrary>1.0.0-SNAPSHOT</version.java-corelibrary>
-        <version.java-io>1.0.0-SNAPSHOT</version.java-io>
-        <version.java-jvm>1.0.0-SNAPSHOT</version.java-jvm>
-        <version.java-multithread>1.0.0-SNAPSHOT</version.java-multithread>
-        <version.java-web>1.0.0-SNAPSHOT</version.java-web>
-    </properties>
-    <developers>
-        <developer>
-            <id>yale</id>
-            <email>zys6024@163.com</email>
-        </developer>
-    </developers>
     <modules>
         <module>java8</module>
         <module>java-base</module>
@@ -43,60 +20,230 @@
         <module>java-corelibrary</module>
         <module>java-web</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <!--tools-->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>23.0</version>
-        </dependency>
-        <!-- test bengin-->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>3.2.3.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.9.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.kubek2k</groupId>
-            <artifactId>springockito</artifactId>
-            <version>1.0.9</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.kubek2k</groupId>
-            <artifactId>springockito-annotations</artifactId>
-            <version>1.0.9</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.jayway.jsonpath</groupId>
-            <artifactId>json-path-assert</artifactId>
-            <version>0.9.1</version>
-            <scope>test</scope>
-        </dependency>
-        <!--end -->
-    </dependencies>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <downloadSources>true</downloadSources>
+        <downloadJavadocs>true</downloadJavadocs>
+
+        <version.java8>1.0.0-SNAPSHOT</version.java8>
+        <version.java-base>1.0.0-SNAPSHOT</version.java-base>
+        <version.java-component>1.0.0-SNAPSHOT</version.java-component>
+        <version.java-corelibrary>1.0.0-SNAPSHOT</version.java-corelibrary>
+        <version.java-io>1.0.0-SNAPSHOT</version.java-io>
+        <version.java-jvm>1.0.0-SNAPSHOT</version.java-jvm>
+        <version.java-multithread>1.0.0-SNAPSHOT</version.java-multithread>
+        <version.java-web>1.0.0-SNAPSHOT</version.java-web>
+
+        <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
+        <mockito.version>1.9.5</mockito.version>
+        <testng.version>6.8.7</testng.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <commons-collections4.version>4.1</commons-collections4.version>
+        <slf4j.version>1.7.12</slf4j.version>
+
+        <maven.jar.plugin.version>2.6</maven.jar.plugin.version>
+        <maven.failsafe.plugin.version>2.19</maven.failsafe.plugin.version>
+        <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
+        <jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
+        <flyway.maven.plugin.version>3.2.1</flyway.maven.plugin.version>
+    </properties>
+    <developers>
+        <developer>
+            <id>yale</id>
+            <email>zys6024@163.com</email>
+        </developer>
+    </developers>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--Test 测试-->
+            <!-- TestNG - http://testng.org/doc/index.html -->
+            <!-- Documentation - http://testng.org/doc/documentation-main.html -->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <!--tools-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>23.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <url>http://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-releases</id>
+            <url>https://repo.spring.io/libs-release</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+            <!-- http://maven.apache.org/guides/mini/guide-attached-tests.html
+            将test代码打成*-test.jar, 用于test代码的复用
+            -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven.jar.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>test-jar</goal>
+                            </goals>
+                            <configuration>
+                                <skipIfEmpty>true</skipIfEmpty>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- http://zeroturnaround.com/rebellabs/the-correct-way-to-use-integration-tests-in-your-build-process/
+                将集成测试独立出来, 单元测试的代码是*Test.java, 集成测试的代码是 *IT.java
+                -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${maven.failsafe.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>integration-test</id>
+                            <goals>
+                                <goal>integration-test</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>verify</id>
+                            <goals>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <systemPropertyVariables>
+                            <!--
+                              spring.config.location的值是spring配置文件的路径, 这些文件供集成测试使用,
+                              这样就将spring的配置外部化了, 便于集成测试的灵活配置,
+                              spring.config.location的值应该在.m2/settings.xml的profile中配置,
+                              如此在使用mvn clean integration-test时就能够通过指定profile来使用不同的配置
+                              关于spring.config.location的文档在这里:
+                              http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config-application-property-files
+                              //<spring.config.location>${spring.config.location}</spring.config.location>
+                            -->
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.flywaydb</groupId>
+                    <artifactId>flyway-maven-plugin</artifactId>
+                    <version>${flyway.maven.plugin.version}</version>
+                    <!--<configuration>
+                        <skip>${skipITs}</skip>
+                    </configuration>-->
+                    <executions>
+                        <execution>
+                            <id>clean-db</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <!-- clean db -->
+                                <goal>clean</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.maven.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>default-prepare-agent</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>default-prepare-agent-integration</id>
+                            <goals>
+                                <goal>prepare-agent-integration</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>default-report</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>default-report-integration</id>
+                            <phase>integration-test</phase>
+                            <goals>
+                                <goal>report-integration</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

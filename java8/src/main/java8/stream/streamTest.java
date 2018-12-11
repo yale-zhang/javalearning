@@ -1,7 +1,5 @@
 package stream;
 
-import com.google.common.cache.RemovalListener;
-import com.google.common.collect.Lists;
 import vo.User;
 
 import java.util.Comparator;
