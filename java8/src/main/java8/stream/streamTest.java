@@ -1,8 +1,8 @@
-package stream;
+package java8.stream;
 
-import com.google.common.cache.RemovalListener;
+import com.google.common.base.Converter;
 import com.google.common.collect.Lists;
-import vo.User;
+import java8.vo.User;
 
 import java.util.Comparator;
 import java.util.List;
@@ -35,9 +35,5 @@ public class streamTest {
         Map<String, Map<Integer, List<User>>> stringMapMap = userList.stream().collect(Collectors.groupingBy(User::getName, Collectors.groupingBy(User::getAge)));
         stringMapMap.forEach((k,v)->System.out.println("先根据名称分组再根据分数分组 ->key:"+k+"    "+"value:"+v));
 
-
-        Converter<String, Integer> converter = (from) -> Integer.valueOf(from);
-        Integer converted = converter.convert("123");
-        System.out.println(converted);    // 123
     }
 }

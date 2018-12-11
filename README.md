@@ -13,3 +13,5 @@
 
 > branch:ex-dev  提交临时代码
 > branch:master 主干代码
+
+[![Build Status](https://travis-ci.org/yale-zhang/javalearning.svg?branch=master)](https://travis-ci.org/yale-zhang/javalearning)

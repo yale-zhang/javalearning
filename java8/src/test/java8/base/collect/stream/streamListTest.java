@@ -1,7 +1,7 @@
 package java8.base.collect.stream;
 
+import java8.vo.User;
 import org.junit.Test;
-import vo.User;
 
 import java.util.*;
 import java.util.stream.Collectors;
