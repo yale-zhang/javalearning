@@ -5,9 +5,9 @@ import java.util.concurrent.*;
 public class test {
     public static void main(String[] args)
     {
-        staticthreads();
+        //staticthreads();
         //MyThreadTest();
-        //CyclicBarrierThreads();
+        CyclicBarrierThreads();
         //callableFuture();
         //callableFutureTask();
     }
@@ -24,6 +24,8 @@ public class test {
             System.out.print(Thread.currentThread().getName()+"在运行！");
         }
     }
+
+
     /**
      * CyslicBarrier
      */

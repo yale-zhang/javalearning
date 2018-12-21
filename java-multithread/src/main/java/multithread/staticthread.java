@@ -1,6 +1,7 @@
 package multithread;
 
 public class staticthread extends Thread{
+
     static {
         System.out.println("静态方法块print："+Thread.currentThread().getName());
     }
