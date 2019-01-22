@@ -22,6 +22,19 @@ public class TestSupplier {
             sup.get();
             //每次get都会调用构造方法，即获取的对象不同
             sup.get();
+
+
         }
+
+
+    /*private static <K, V, M extends Map<K,V>> BinaryOperator<M> mapMerger(BinaryOperator<V> mergeFunction) {
+        return (m1, m2) -> {
+            for (Map.Entry<K,V> e : m2.entrySet())
+                m1.merge(e.getKey(), e.getValue(), mergeFunction);
+            return m1;
+        };
+    }*/
+
+
 }
 
