@@ -1,5 +1,6 @@
 package generics;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,15 @@ public class Test{
     static class Man extends Human{}
     static class Woman extends Human{}
 
+
+    public static <T extends Number> T bigerOne(T a,T b){
+        return a;
+    }
     public static void main(String[] args) {
+
+        Number i = bigerOne(5, 3.1);
+
+
         List<Human> list = new ArrayList<Human>();
         list.add(new Man());
         list.add(new Woman());

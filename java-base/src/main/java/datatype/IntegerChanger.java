@@ -16,13 +16,16 @@ import java.lang.reflect.Field;
 public class IntegerChanger {
 
     public static void main(String[] args) {
-        Integer a = 1, b = 2;
+        String str ="abc_efg";
+        String substring = str.substring(str.lastIndexOf("_")+1,str.lastIndexOf("_")+4);
+        System.out.println(substring);
+        /*Integer a = 1, b = 2;
         System.out.println("before swap a = " + a + ", b = " + b);
         swap(a, b);
         System.out.println("after swap a = " + a + ", b = " + b);
 
         Integer c = 1;
-        System.out.println("(警告:Integer缓存被改了,代码里:Integer c = 1;) 实际c=" + c);
+        System.out.println("(警告:Integer缓存被改了,代码里:Integer c = 1;) 实际c=" + c);*/
     }
 
     public static void swap(Integer i1, Integer i2) {
