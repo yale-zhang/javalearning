@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 通过CustomEditorConfigurer这个BeanFactoryProcessor来完成自定义的ProperyEditor到IOC容器的添加功能 -->
+    <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <bean class="com.panlingxiao.spring.validation.editor.MyPropertyEditorRegistrar"/>
+        </property>
+    </bean>-->
+
+    <bean class="springframework.propertyeditorsupport.Circle" id="circle">
+        <property name="point" value="1;2"/>
+    </bean>
+
+</beans>
