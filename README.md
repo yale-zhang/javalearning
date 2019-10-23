@@ -1,5 +1,4 @@
-#### java学习札记
-[![Build Status](https://travis-ci.org/yale-zhang/javalearning.svg?branch=master)](https://travis-ci.org/yale-zhang/javalearning)  
+#### java学习札记[![Build Status](https://travis-ci.org/yale-zhang/javalearning.svg?branch=master)](https://travis-ci.org/yale-zhang/javalearning)  
 笔记内容主要是对java的一些基础特性和编程细节进行总结和归纳,。
   
 #### 仓库目录   
