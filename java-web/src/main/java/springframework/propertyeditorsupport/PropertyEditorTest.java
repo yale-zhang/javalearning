@@ -12,7 +12,7 @@ public class PropertyEditorTest {
             }
         };
         Node node = PropertyEditorSample.convert(parameters);
-        System.out.println(node.getNodeName());
-        System.out.println(node.getUser());
+        //System.out.println(node.getNodeName());
+        //System.out.println(node.getUser());
     }
 }
