@@ -1,12 +1,5 @@
 package Json.jsonResoler;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.util.*;
-
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -106,7 +99,7 @@ public class JsonResolver {
             "iYearDebitAMT_F",
             "iYearDebitQTY"
     };
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 		String inpath = SystemProperties.getInstance().getValues("inpath", "D:/bb.json");
 		String outpath = SystemProperties.getInstance().getValues("outpath", "G:/yehao/00.test_data/data1.json");
 //        if(args.length != 3){
@@ -119,28 +112,24 @@ public class JsonResolver {
         LOG.info("inpath:"+inpath);
         LOG.info("outpath:"+outpath);
         //LOG.info("type:"+type);
-
         Map<String, Object> map = new HashMap<String, Object>();
         ObjectMapper mapper = new ObjectMapper();
         String str = "";
         try{
-            map = mapper.readValue(new File(inpath), new TypeReference<HashMap<String, Object>>(){});
-            /*if (map instanceof Map){
+           // map = mapper.readValue(new File(inpath), new TypeReference<HashMap<String, Object>>(){});
+            *//*if (map instanceof Map){
                 Object accountbooks = map.get("accountbook");
                 List<Map<String,Object>> accountbookList = (List<Map<String,Object>>)accountbooks;
                 for (Map<String,Object> accountbook:accountbookList){
                     accountbook
                 }
-            }*/
-
-
+            }*//*
             //Set<Map.Entry<Integer, List<Accountbook>>> entries = accountbookMaps.entrySet();
-           /* for (Map.Entry<String,List<Account>> entries:accountbookMaps.entrySet()){
+           *//* for (Map.Entry<String,List<Account>> entries:accountbookMaps.entrySet()){
                 //Account accountbookList = entries.getValue();
-            }*/
-
+            }*//*
             //Map<Integer, Accountbook>  hits = (Map<Integer, Accountbook>) map.get("accountbook");
-            /* String[] ary;
+            *//* String[] ary;
            if(TYPE_PUBLISH.equals(type)){
                 ary = ARY_PUBLISH;
             }else if(TYPE_RELAY.equals(type)){
@@ -148,7 +137,7 @@ public class JsonResolver {
             }else{
                 LOG.error("The Exception occured. type is wrong");
                 return;
-            }*/
+            }*//*
             List<Map<String, String>> list = (List<Map<String, String>>) map.get("accountbook");
             Accountbook accountbook =null;
             for(Map<String, String> data : list){
@@ -159,9 +148,9 @@ public class JsonResolver {
                     //accountbook.getCAcctGUID()
 
                 }
-                /*for(String col : ary){
+                *//*for(String col : ary){
                     str += dataMap.get(col) + separator;
-                }*/
+                }*//*
                 str += "\n";
             }
             if(!"".equals(str)){
@@ -177,5 +166,5 @@ public class JsonResolver {
         }catch(Exception e){
             LOG.error("The Exception occured.", e);
         }
-    }
+    }*/
 }
