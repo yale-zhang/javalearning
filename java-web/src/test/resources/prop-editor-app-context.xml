@@ -5,11 +5,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 通过CustomEditorConfigurer这个BeanFactoryProcessor来完成自定义的ProperyEditor到IOC容器的添加功能 -->
-    <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
         <property name="propertyEditorRegistrars">
-            <bean class="com.panlingxiao.spring.validation.editor.MyPropertyEditorRegistrar"/>
+            <bean class="springframework.propertyeditorsupport.registrar.MyPropertyEditorRegistrar"/>
         </property>
-    </bean>-->
+    </bean>
 
     <bean class="springframework.propertyeditorsupport.Circle" id="circle">
         <property name="point" value="1;2"/>

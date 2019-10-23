@@ -41,22 +41,21 @@
    可以在配置文件中注册自定义编辑器，也可以以编程的方式注册自定义编辑器。  
    ```java
      String location = "testApplicationContext.xml";  
-             Resource resource = new ClassPathResource(location);  
-             XmlBeanFactory beanFactory = new XmlBeanFactory(resource);  
-             beanFactory.registerCustomEditor(Photo.class, PhotoEditor.class);     
+             Resource resource = new ClassPathResource(location);
+             XmlBeanFactory beanFactory = new XmlBeanFactory(resource);
+             beanFactory.registerCustomEditor(Photo.class,PhotoEditor.class); 
    ```
    ```xml
-     <bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">  
-             <property name="customEditors">  
-                 <map>  
-                     <entry key="com.dream.model.photo.Photo">  
-                         <ref bean="photoEditor"/>  
-                     </entry>  
-                 </map>  
-             </property>  
-         </bean>  
-         <bean id="photoEditor" class="com.dream.editor.PhotoEditor">  
-             <property name="photoService" ref="photoService"/>  
-         </bean> 
+     <bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+         <property name="customEditors">
+             <map>  
+                 <entry key="com.dream.model.photo.Photo">  
+                     <ref bean="photoEditor"/>  
+                 </entry>
+             </map>
+         </property>
+     </bean>  
+     <bean id="photoEditor" class="com.dream.editor.PhotoEditor">
+         <property name="photoService" ref="photoService"/>
+     </bean>
    ```
-       
