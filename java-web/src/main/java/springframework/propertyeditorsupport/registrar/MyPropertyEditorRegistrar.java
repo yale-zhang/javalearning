@@ -2,7 +2,7 @@ package springframework.propertyeditorsupport.registrar;
 
 import org.springframework.beans.PropertyEditorRegistrar;
 import org.springframework.beans.PropertyEditorRegistry;
-import springframework.propertyeditorsupport.Point;
+import springframework.propertyeditorsupport.Vo.Point;
 import springframework.propertyeditorsupport.PointEditor;
 
 /**

@@ -1,4 +1,6 @@
-package springframework.propertyeditorsupport;
+package springframework.propertyeditorsupport.Vo;
+
+import springframework.propertyeditorsupport.UserEditor;
 
 import java.util.Date;
 

@@ -8,4 +8,6 @@ SpringFrameWork:
    ![avatar](src/main/resources/pic/BeanWrapper.webp)  
 (Spring的类型转换系统在经历了版本升级变更之后，从3.0前的**PropertyEditor体系**转变到了3.0后的**Converter和Formatter转换体系**。)
 参考链接：
-* [深入分析Spring中的类型转换与校验](https://www.jianshu.com/p/e2baa8d87029)
+* [深入分析Spring中的类型转换与校验](https://www.jianshu.com/p/e2baa8d87029)  
+* [Spring conversion框架](https://blog.csdn.net/pentiumchen/article/details/44066173)  
+* [深入分析Spring Type Conversion数据转换](https://blog.csdn.net/everyok/article/details/81350891)  

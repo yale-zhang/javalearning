@@ -1,4 +1,4 @@
-package springframework.propertyeditorsupport;
+package springframework.propertyeditorsupport.Vo;
 
 public class Node {
     private String nodeName;

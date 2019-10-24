@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stringToDateConverter" class="springframework.propertyeditorsupport.Converter.StringToDateConverter">
+        <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"></property>
+    </bean>
+
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set><ref bean="stringToDateConverter"></ref></set>
+        </property>
+    </bean>
+
+    <bean id="dateBean" class="springframework.propertyeditorsupport.Vo.DateBean">
+        <constructor-arg value="2014-03-04 09:21:20"></constructor-arg>
+    </bean>
+</beans>

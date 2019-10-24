@@ -1,5 +1,7 @@
 package springframework.propertyeditorsupport;
 
+import springframework.propertyeditorsupport.Vo.Point;
+
 import java.beans.PropertyEditorSupport;
 
 /**

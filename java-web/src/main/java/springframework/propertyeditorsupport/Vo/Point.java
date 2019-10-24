@@ -1,4 +1,4 @@
-package springframework.propertyeditorsupport;
+package springframework.propertyeditorsupport.Vo;
 
 import lombok.Data;
 
