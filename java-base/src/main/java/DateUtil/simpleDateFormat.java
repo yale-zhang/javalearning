@@ -9,7 +9,7 @@ public class simpleDateFormat {
     /**
      * jdk SimpleDateFormat 时间操作工具类
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Date myDate = new Date();
         String date = DateFormat.getDateInstance().format(myDate);//
         String dateTime = DateFormat.getDateTimeInstance().format(myDate);
@@ -26,5 +26,11 @@ public class simpleDateFormat {
         FieldPosition fieldPosition = new FieldPosition(DateFormat.Field.DAY_OF_MONTH);
         StringBuffer buffer = sdf.format(myDate, strBuffer, fieldPosition);
         System.out.println(buffer);
+        System.out.println(getNowDate());
+
+    }
+
+    public static Date getNowDate() {
+       return new Date(new Date().getTime());
     }
 }
