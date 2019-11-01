@@ -1,6 +1,7 @@
 package java8.base.collect;
 
 import junit.framework.TestCase;
+import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.Collection;
@@ -9,7 +10,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class MapTest extends TestCase {
-
+    @Test
     public void testMapCompute(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
@@ -18,6 +19,7 @@ public class MapTest extends TestCase {
         map.compute(1,(k,v) ->(v == null)? "msg":v.concat("msg"));
         assertEquals("amsg",map.get(1));
     }
+    @Test
     public void testss(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
@@ -26,6 +28,7 @@ public class MapTest extends TestCase {
         map.compute(1,(k,v) ->(v == null)? "msg":v.concat("msg"));
         assertEquals("amsg",map.get(1));
     }
+    @Test
     public void testMapForEach(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
@@ -58,7 +61,7 @@ public class MapTest extends TestCase {
             map.putIfAbsent(i,"val_"+i);
         }
     }
-
+    @Test
     public void testGetordefault(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
@@ -74,7 +77,7 @@ public class MapTest extends TestCase {
                 Map.Entry<Integer, String> entry = iterator.next();
             }
     }
-
+    @Test
     public void testMaps(){
         Map<Integer, String> map = new HashMap<>();
         map.put(1,"a");
@@ -86,7 +89,7 @@ public class MapTest extends TestCase {
         }
         map.forEach((k,v) -> System.out.println("key :"+k+"; value:"+v));
     }
-
+    @Test
     public void test(){
         BigDecimal scale = BigDecimal.ZERO.setScale(2);
         System.out.print(scale);
